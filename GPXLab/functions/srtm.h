@@ -99,7 +99,7 @@ public:
      * @brief Constructs the SRTM class
      * @param model The model defines the precision of the HGT files
      */
-    SRTM(SRTMModel model = ThreeArcSecond);
+    SRTM(SRTMModel model = OneArcSecond);
     ~SRTM();
 
     /**
