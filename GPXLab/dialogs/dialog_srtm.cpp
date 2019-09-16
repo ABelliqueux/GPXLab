@@ -26,7 +26,8 @@ Dialog_srtm::Dialog_srtm(const GPX_wrapper *gpxmw, QWidget *parent) :
 {
     // create new SRTM class
     QString dir = QStandardPaths::writableLocation(QStandardPaths::AppConfigLocation);
-    srtm = new SRTM();
+    // Let's use OneArcSecond files
+    srtm = new SRTM(SRTM::SRTMModel::OneArcSecond);
     srtm->setDirectory(dir.toStdString());
     QDir tempDir;
     tempDir.mkpath(dir);
