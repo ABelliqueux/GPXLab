@@ -152,8 +152,8 @@ short* SRTM::fixVoid(short *inAltitudes)
 
 bool SRTM::getAltitude(double latitude, double longitude, short &altitude)
 {
-    int _iLatitude  = (int)latitude;
-    int _iLongitude = (int)longitude;
+    int _iLatitude  = (int)floor(latitude);
+    int _iLongitude = (int)floor(longitude);
 
     // check if need to parse new map file
     if (_iLatitude != iLatitude || _iLongitude != iLongitude || failed)
